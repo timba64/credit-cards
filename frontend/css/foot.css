@@ -1,0 +1,29 @@
+/* footer  styles
+-----------------------------------------------------------------------------*/
+.wr-foot {
+  display: flex;
+  padding: 40px 0 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.wr-foot a {
+  padding: 8px 0;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+@media (min-width: 576px) {
+  .foot {
+    flex: 0 1 50%;
+    width: 50%;
+  }
+}
+
+@media (min-width: 992px) {
+  .wr-foot {
+    padding: 50px 0 34px;
+    flex-wrap: nowrap;
+  }
+
+}

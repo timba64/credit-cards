@@ -1,0 +1,96 @@
+/* m-button  styles
+-----------------------------------------------------------------------------*/
+.m-button {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    align-items: center;
+    float: right;
+    width: 26px;
+    height: 30px;
+    padding: 0px;
+    margin: 1px 0 0;
+    background: transparent;
+    cursor: pointer
+}
+
+.m-button span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #E33832;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3 ease-in-out
+}
+
+.hplus .m-button span {
+  background-color: #ffffff;
+}
+
+.m-button span:before {
+    position: absolute;
+    top: -9px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #E33832;
+}
+
+.hplus .m-button span:before {
+    background-color: #ffffff;
+}
+
+.m-button span:after {
+    position: absolute;
+    bottom: -9px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #E33832;
+}
+
+.hplus .m-button span:after {
+    background-color: #ffffff;
+}
+
+.m-button span::before,.m-button span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s
+}
+
+.m-button span::before {
+    transition-property: top, transform
+}
+
+.m-button span::after {
+    transition-property: bottom, transform
+}
+
+.m-button.open span {
+    background-color: transparent
+}
+
+.m-button.open span:before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0
+}
+
+.m-button.open span:after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 0
+}
+
+.m-button.open span::before,.m-button.open span::after {
+    transition-delay: 0s, 0.3s
+}

@@ -1,0 +1,115 @@
+/* mobile-menu styles
+-----------------------------------------------------------------------------*/
+.header-down {
+  position: fixed;
+  z-index: 11;
+  top: 0;
+  right: 0;
+  width: 0vw;
+  height: 100vh;
+  background: #E33832;
+  visibility: hidden;
+  opacity: 0;
+  transition-property: width, visibility, opacity;
+  transition-duration: 350ms;
+  transition-timing-function: ease-out;
+  transition-delay: 300ms;
+}
+
+.header-down.open {
+  width: 70vw;
+  visibility: visible;
+  opacity: 1;
+}
+
+.contan {
+  width: 40vw;
+  margin: 14vh auto;
+}
+
+.header-down .nav-mob ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header-down .nav-mob li {
+  line-height: 48px;
+  border-bottom: 1px solid #fff;
+}
+
+.header-down .nav-mob li:last-child {
+  border-bottom: 0;
+}
+
+.header-down .nav-mob a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.close-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: calc(50% - 13px);
+  top: 4vh;
+  width: 26px;
+  height: 30px;
+  padding: 0px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.close-button span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: transparent;
+  transition: all 0.3 ease-in-out;
+}
+
+.close-button span:before {
+    position: absolute;
+    top: -9px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.close-button span:after {
+    position: absolute;
+    bottom: -9px;
+    display: block;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: #ffffff;
+}
+
+.close-button.open span:before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 0
+}
+
+.close-button.open span:after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    bottom: 0
+}
+
+@media (min-width: 768px) {
+  .header-down.open {
+    width: 40vw;
+  }
+
+  .contan {
+    width: 20vw;
+  }
+}

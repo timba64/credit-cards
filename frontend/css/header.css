@@ -1,0 +1,56 @@
+/* header and nav  styles
+-----------------------------------------------------------------------------*/
+.header-top_halva-plus {
+  background-color: rgba(203, 61, 84, 0.4);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(203, 61, 84, 0.2);
+}
+
+.header-top_halva-plus .container {
+  height: 100%;
+}
+
+.wr-headbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-top {
+  flex: 0 1 50%;
+}
+
+.wr-m-button {
+  flex: 0 1 50%;
+}
+
+.logo-top img {
+  width: 105px;
+}
+
+.nav-head {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .nav-head {
+    display: block;
+  }
+
+  .nav-head .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .nav-head .menu li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .nav-head .menu li:last-child {
+    margin-right: 0;
+  }
+}
